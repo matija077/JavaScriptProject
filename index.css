@@ -53,3 +53,48 @@ img {
 .flex-align-right {
     margin-left: auto;
 }
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.side-navigation {
+
+}
+
+.content__side-navigation {
+    flex: 0 1 20vw;
+    border: 2xp double green;
+    outline: solid;
+}
+
+.side-navigation--collapsed {
+    flex: 0 1 5vw;
+}
+
+.content-container {
+}
+
+.content__content-container {
+    flex: 1 1 60vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.side-paragraph {
+
+}
+
+.content__side-paragraph {
+    flex: 0 1 20vw;
+}
+
+.side-paragraph--shrink {
+    flex: 0 1 10vw;
+}
+
+.side-paragraph--non-visible {
+    display: none;
+}
