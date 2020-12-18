@@ -1,0 +1,283 @@
+a:visited 
+{
+    text-decoration: none; 
+}
+
+
+h1 {  
+ position: relative;
+ margin-top:-30px;
+  font-family: arial;
+  font-size: 15px;
+  color: black;
+  overflow: hidden;
+  text-align:center;
+  z-index: 1;
+  top: 50%
+   
+}
+
+/*background: url('https://i.ibb.co/SdFn0Hv/cool-background.png');
+*/
+
+.content {
+  display: inline-grid;
+  justify-content: space-evenly;
+  padding: 10 150px;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 35px;
+  margin: 20 20 20 100;
+}
+
+.iframe {
+  display:block;
+  width: 460px;
+  height: 240px;
+  margin: 0 auto;
+  
+}
+
+.article {
+  position: relative;
+  background-image: url("https://i.ibb.co/vhMxMDf/imageedit-2-2465901220.png");
+  background-attachment:fixed;
+  font-family: arial;
+  font-size: 14px;
+  text-align: justify;
+  padding: 40px;
+  
+}
+
+#headerarticle {
+
+  font-size: 25px;
+ 
+}
+
+
+.topnav a:link {
+  color: rgb(133, 122, 122);
+  font-family: arial;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+
+.topnav a:hover {
+  color: rgb(235, 231, 231);
+  text-decoration: none;
+}
+
+
+
+.topnav { 
+  font-family: Arial;
+  background-color: rgb(255, 255, 255);
+  color: rgb(105, 96, 96);
+  text-align: left;
+  font-weight: bold;
+  font-size: 25px;
+  height: 80px;
+  display: flex;
+  margin-top: 20px;
+  }
+
+  .topnav img {
+    width:25px;
+    height:20px;
+   border: none;
+   
+  }
+
+  .topnav img:hover {
+    opacity: 0.5;
+  }
+  
+  #firstsocialnetwork {
+    margin-left: auto;
+  }
+  
+  
+ 
+
+footer {
+  width: 50vw;
+  margin-left: -15vw;
+  margin-right: 25vw;
+  
+  font-family: arial;
+  text-align: center;
+  font-size: 16px;
+}
+
+
+
+
+/*LOGIN FORM: */
+
+
+
+.loginform { text-align: center;
+  color: rgb(0, 0, 0);
+  background-image: url("https://i.ibb.co/vhMxMDf/imageedit-2-2465901220.png");
+  padding:50px;
+  margin: 30px 400px 100px 400px;
+  font-family: arial;
+  font-size: 14px;
+}
+
+.forgotpasswordform { text-align: center;
+  color: rgb(0, 0, 0);
+  background-image: url("https://i.ibb.co/vhMxMDf/imageedit-2-2465901220.png");
+  padding:50px;
+  font-family: arial;
+  font-size: 14px;
+}
+
+
+
+
+/* PARTICLES CSS */
+
+canvas{ display: block; vertical-align: top; }
+ /* ---- particles.js container ---- */
+ 
+ #particles-js{ 
+   position:absolute; 
+   width: 100%; 
+  height: 100%; 
+  background-color: #ffffff;
+   background-image: url(""); 
+   background-repeat: no-repeat; 
+   background-size: cover; 
+   background-position: 50% 50%;
+   z-index: 2; 
+   background-size: auto;
+}
+
+#particleContainer {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  margin: 10px;
+}
+   
+/*DROP DOWN MENU*/
+
+.dropdown-container { 
+  position:relative;
+  z-index: 100; }
+
+.dropbutton { background-color: rgb(0, 0, 0);
+   color: white; 
+   font-family: arial;
+    padding: 14px; 
+    margin-top: 20;
+    font-size: 16px;
+     border: none; 
+     cursor: pointer; }
+
+.dropbutton:hover + .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {display: none;
+  font-family: arial;
+  position: absolute;
+  top: 100%;
+  left: 0px; 
+  margin-left: 0px;
+  background-color: rgb(255, 255, 255);
+  min-width: 60px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
+  border: 1px;z-index: 3;opacity: 0.8;}
+ 
+  
+.dropdown-content a { color: rgb(0, 0, 0); 
+  text-align: left; 
+  font-weight: bold;
+   padding: 12px 16px;
+    text-decoration: none;
+     display: block; }
+
+.dropdown-content a:hover { 
+  color: rgb(0, 0, 0); 
+  background: rgb(255, 255, 255); 
+  border: 1px solid rgb(0, 0, 0);
+ }
+
+ .dropdown-content:hover {
+   display: block;
+ }
+
+
+.show { display: block; }
+
+/*SHOP */
+.gallery {
+  display: inline-grid;
+  width: 50vw;
+  margin-left: 15vw;
+  margin-right: 25vw;
+  column-gap: 380px; 
+  row-gap: 40px;
+  font-family: 'Amatic SC';
+  text-shadow: 4px 4px 4px #aaa;
+  
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-items: stretch;
+  align-items: stretch;
+  font-size: 20px;
+  text-align: justify;
+  padding: 40px;
+  
+}
+
+.photoContainer {
+  background-image: url("https://i.ibb.co/vhMxMDf/imageedit-2-2465901220.png");
+  background-attachment:fixed;
+  border: 1px;
+  padding: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  font-family: 'Amatic SC';
+  width:200px;
+  height: 200px;
+
+}
+
+.photo {
+  width:100%;
+  border: 1px solid black;
+}
+.photoTitle1 {
+  display:inline-block;
+  padding: 10px;
+  text-align: center; 
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.photoTitle2 {
+  display:inline-block;
+  padding: 10px;
+  text-align: center;
+  font-family: arial; 
+  font-size: 14px;
+}
+
+#headerarticle {
+
+  font-size: 25px;
+ 
+}
+
+#buttonCart {
+  width: 20%;
+  height: 40%;
+  margin-top: 5px;
+  cursor: pointer;
+
+}
