@@ -18,9 +18,9 @@ header {
 }
 
 footer {
-    position: absolute;
+    position: relative;
     bottom: 0px;
-    text-align: right;
+    text-align: center;
     height: 5vh;
 }
 
@@ -61,7 +61,6 @@ img {
 }
 
 .content > * {
-    margin: inherit 10px;
 }
 
 .side-navigation-container {
@@ -72,6 +71,7 @@ img {
     flex: 0 1 20vw;
     border: 2xp double green;
     outline: solid;
+    margin-right: 10px;
 }
 
 .side-navigation-container--collapsed {
@@ -109,6 +109,8 @@ img {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .side-paragraph {
@@ -117,6 +119,7 @@ img {
 
 .content__side-paragraph {
     flex: 0 1 20vw;
+    margin-left: 10px;
 }
 
 .side-paragraph--shrink {
