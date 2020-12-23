@@ -84,6 +84,10 @@ img {
     align-items: center;
 }
 
+.content__side_navigation {
+
+}
+
 .centerRelativeVertically {
     position: relative;
     top: 50%;
