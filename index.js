@@ -9,18 +9,23 @@ leftMenuContainer.onpointerenter = function(event) {
     leftMenuHidder.classList.add("hidden");
     rightMenuContainer.classList.add("side-paragraph--shrink");
     event.preventDefault();
-    event.stopPropagation();
 }
 
 leftMenuContainer.onpointerleave = function(event) {
     leftMenuHidder.classList.remove("hidden");
     leftMenuContainer.classList.add("side-navigation-container--collapsed");
     leftMenu.classList.add("hidden");
-    rightMenuContainer.classList.remove("side-paragraph--shrink");
     event.preventDefault();
-    event.stopPropagation();
 }
 
-leftMenuContainer.onmouseenter = function(event) {
-    console.log(event);
+rightMenuContainer.onpointerenter = function(event) {
+    leftMenuContainer.classList.add("side-navigation-container--collapsed");
+    rightMenuContainer.classList.remove("side-paragraph--shrink");
+    event.preventDefault();
+}
+
+rightMenuContainer.onpointerleave = function(event) {
+    leftMenuContainer.classList.add("side-navigation-container--collapsed");
+    rightMenuContainer.classList.add("side-paragraph--shrink");
+    event.preventDefault();
 }

@@ -126,7 +126,7 @@ img {
 }
 
 .side-paragraph--shrink {
-    flex: 0 1 10vw;
+    flex: 0 1 5vw;
 }
 
 .side-paragraph--non-visible {
