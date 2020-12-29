@@ -29,3 +29,7 @@ rightMenuContainer.onpointerleave = function(event) {
     rightMenuContainer.classList.add("side-paragraph--shrink");
     event.preventDefault();
 }
+
+function mainMenuClickHandler(event) {
+    event.preventDefault();
+}

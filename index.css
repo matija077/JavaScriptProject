@@ -36,7 +36,13 @@ img {
 }
 
 .main-navigation {
+    font-size: 5vh;
+    text-decoration: none;
+}
 
+.stripped-link {
+    text-decoration: none;
+    color: inherit;
 }
 
 .social-networks {
