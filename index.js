@@ -31,5 +31,5 @@ rightMenuContainer.onpointerleave = function(event) {
 }
 
 function mainMenuClickHandler(event) {
-    event.preventDefault();
+    // event.preventDefault();
 }
