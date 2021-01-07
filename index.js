@@ -4,6 +4,7 @@ var leftMenuHidder = document.getElementsByClassName("side-navigation-container_
 var rightMenuContainer = document.getElementsByClassName("content__side-paragraph")[0];
 var mainContent = document.getElementsByClassName("content-container")[0];
 
+console.dir(window.document);
 var currentPageObject = {
     id: "home",
     pages: {
@@ -47,24 +48,5 @@ rightMenuContainer.onpointerleave = function(event) {
 }
 
 function mainMenuClickHandler(event) {
-    event.preventDefault();
-
-    var newPageId = event.currentTarget.dataset.id.toLowerCase();
-
-    if (currentPageObject.id === newPageId) {
-        return;
-    }
-
-    fetch(`src/${newPageId}/${newPageId}.html`, {
-        headers: {
-            'Content-type': 'text/html'
-        }
-    }).
-    then(function resolved(result) {
-        var reader = result.body.getReader();
-        console.log(reader);
-    }).
-    catch(function rejected(error) {
-        console.log(error);
-    })
+    //event.preventDefault();
 }

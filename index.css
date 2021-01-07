@@ -1,36 +1,3 @@
-body {
-    margin: 0px;
-    padding: 0px;
-    background-image: url("https://www.freepik.com/premium-vector/gradient-geometric-shape-background_4955084.htm#page=1&query=web%20background&position=1");
-    background-color: #cccccc;
-    font-family: 'Dancing Script', cursive;
-    font-size: 3vh;
-}
-
-li {
-    list-style-type: none;
-}
-
-header {
-    position: relative;
-    top: 0px;
-    height: 5vh;
-}
-
-footer {
-    text-align: center;
-    height: 5vh;
-}
-
-main {
-    margin: 20px;
-    height: 90vh;
-}
-
-img {
-    max-width: 100%;
-}
-
 .top-header {
     display: flex;
 }
