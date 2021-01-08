@@ -19,12 +19,9 @@ function loadHead(event) {
         return result.text();
     }). 
     then(function resolved(result) {
-        /*var reader = result.body.getReader();*/
         var parser = new DOMParser();
-        console.log(result);
 
         var documentToLoad = parser.parseFromString(result, "text/html")
-        console.dir(documentToLoad);
 
         addHead(documentToLoad);
     }).
@@ -34,12 +31,10 @@ function loadHead(event) {
 }
 
 // add routes for css in js.
-// css doesnt load
 function addHead(documentToLoad) {
-    var headToLoad = documentToLoad.querySelector("head");
-    console.log(headToLoad);
+    var headToLoad = documentToLoad.getElementsByTagName("head")[0];
 
-    var head = document.querySelector("head");
+    var head = document.getElementsByTagName("head")[0];
     head.innerHTML = headToLoad.innerHTML;
 }
 
