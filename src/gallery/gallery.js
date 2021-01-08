@@ -38,4 +38,6 @@ function addHead(documentToLoad) {
     head.innerHTML = headToLoad.innerHTML;
 }
 
-loadHead();
+// loadHead();
+import loadHead2 from '../head/head.js';
+loadHead2();
