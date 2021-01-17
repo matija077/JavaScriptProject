@@ -1,47 +1,43 @@
+import Link from './link.js';
+
 var head = document.getElementsByTagName('head')[0];
 
 function loadHead() {
-    var fontsLink = createElement("link", {
+    console.log("working");
+    var fontsLink = new Link({
         rel: "preconnect",
         href: "https://fonts.gstatic.com"
     });
-    var fontsLink2 = createElement("link", {
+    var fontsLink2 = new Link({
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
     });
-    var stylesheet1 = createElement("link", {
+    var stylesheet1 = new Link({
         rel: "stylesheet",
         href: "http://localhost:5500/rootStyle.css"
     });
-    var stylesheet2 = createElement("link", {
+    var stylesheet2 = new Link({
         rel: "stylesheet",
         href: "../gallery/gallery.css"
     });
+
+    console.log(stylesheet2.getAttributesForDOM());
+    console.log(stylesheet2.getElementType());
 
     let elements = [fontsLink, fontsLink2, stylesheet1, stylesheet2];
 
     addToHead(elements);
 }
 
-function createElement(elemType, params) {
-    var element;
-    switch(elemType) {
-        case "link":
-            element = createLinkElemenet(params)
-            break;
-        default:
-            break;
+function createDomElements(elements) {
+
+    var element = document.createElement('link');
+
+    for (let atribute in params) {
+        link.setAttribute(atribute, params[atribute]);
     }
 
-    function createLinkElemenet(params) {
-        var link = document.createElement('link');
-
-        for (let atribute in params) {
-            link.setAttribute(atribute, params[atribute]);
-        }
-
-        return link;
-    }
+    return link;
 
     return element;
 }
