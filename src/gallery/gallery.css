@@ -1,0 +1,19 @@
+.content {
+    display: grid;
+    grid-template-columns: [column-start] 1fr [column-inner-start] 2fr [column-end];
+    grid-template-rows: repeat(2, [row-start] 1fr [row-end]);
+}
+/*[first] 1fr [second] 2fr [third]*/
+
+.content > img {
+    border: 2px solid black;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 10px 10px;
+    background-color: aquamarine;
+    outline: 2px inset thick red;
+}
+
+img {
+    max-width: 100%;
+}
