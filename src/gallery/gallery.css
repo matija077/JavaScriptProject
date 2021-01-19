@@ -1,7 +1,14 @@
 .content {
     display: grid;
-    grid-template-columns: [column-start] 1fr [column-inner-start] 2fr [column-end];
-    grid-template-rows: repeat(2, [row-start] 1fr [row-end]);
+    grid-template-columns: repeat(auto-fill, [column-start] fit-content(100px) [column-end]);
+    grid-template-rows: [row-start] minmax(100px, 200px) [row-end];
+    grid-template-areas:
+        "header header header header"
+        "aside . article article";
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    justify-items: stretch;
+    align-items: stretch;
 }
 /*[first] 1fr [second] 2fr [third]*/
 
@@ -11,9 +18,21 @@
     padding: 10px;
     box-shadow: 10px 10px;
     background-color: aquamarine;
-    outline: 2px inset thick red;
+    outline: 2px inset red;
 }
 
 img {
     max-width: 100%;
+}
+
+.content > header {
+    grid-area: header;
+}
+
+.content > aside {
+    grid-area: aside;
+}
+
+.content > article {
+    grid-area: article;
 }
