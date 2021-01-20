@@ -1,6 +1,6 @@
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, [column-start] fit-content(100px) [column-end]);
+    grid-template-columns: repeat(4, [column-start] fit-content(400px) [column-end]);
     grid-template-rows: [row-start] minmax(100px, 200px) [row-end];
     grid-template-areas:
         "header header header header"
@@ -35,4 +35,9 @@ img {
 
 .content > article {
     grid-area: article;
+}
+
+.content > div {
+    grid-column: 2 / span 3;
+    grid-row: aside
 }
