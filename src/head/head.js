@@ -22,24 +22,33 @@ function loadHead() {
     });
 
     console.log(stylesheet2.getAttributesForDOM());
-    console.log(stylesheet2.getElementType());
+    //console.log(stylesheet2.getElementType());
 
     let elements = [fontsLink, fontsLink2, stylesheet1, stylesheet2];
+
+    createDomElements(elements);
 
     addToHead(elements);
 }
 
 function createDomElements(elements) {
-
-    var element = document.createElement('link');
-
-    for (let atribute in params) {
-        link.setAttribute(atribute, params[atribute]);
+    for (let element of elements) {
+        console.log(element.getType());
+        console.log(element.getAttributesForDOM());
     }
 
-    return link;
+    //var element = document.createElement('link');
 
-    return element;
+    
+    
+
+    /*for (let atribute in params) {
+        link.setAttribute(atribute, params[atribute]);
+    }*/
+
+    //return link;
+
+    //return element;
 }
 
 function addToHead(elements) {

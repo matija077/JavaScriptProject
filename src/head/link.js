@@ -4,7 +4,7 @@ function Link({
     rel,
     href
 }){
-    Element.call(this, {});
+    Element.call(this, {type: "Link"});
 
     this.getRel = function() {
         return rel;
@@ -13,8 +13,6 @@ function Link({
     this.getHref = function() {
         return href;
     }
-
-    var type = "Link";
 }
 
 Link.prototype = Object.create(Element.prototype);
@@ -28,12 +26,14 @@ function getElementTypeImp() {
 Object.defineProperties(Link.prototype, {
     getAttributesForDOM: {
         value: function getAttributesForDOM() {
-            let attributes = {};
+            var atributes = ["rel", "href"];
 
-            attributes.rel = this.getRel();
-            attributes.href = this.getHref();
+            /*attributes.rel = this.getRel();
+            attributes.href = this.getHref();*/
 
-            return attributes;
+            const superEmulated = Object.getPrototypeOf(this.constructor).prototype;
+            console.log(superEmulated);
+            return superEmulated.getAttributesForDOM.call(this, atributes);
         }
     }
 })
