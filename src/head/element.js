@@ -3,8 +3,6 @@ function Element({
     className = undefined,
     type = "Element"
 }) {
-    var atributes = {};
-
     this.getId = function getId() {
         if (id) {
             return id;
@@ -23,7 +21,7 @@ function Element({
         className = className;
     }
 
-    this.getAtributes = function getAtributes() {
+    this.getAttributes = function getAtributes() {
         return atributes;
     }
     this.setAtributes = function setAtributes() {
@@ -43,20 +41,17 @@ Object.defineProperties(Element.prototype, {
     },
     getAttributesForDOM: {
         value: function getAttributesForDOM(keys) {
-            var atributes = {};
-
-            console.log(keys);
-            console.log(this);
+            var attributes = {};
 
             for (let key of keys) {
                 const upercaseKey = key.charAt(0).toUpperCase() + key.slice(1);
                 let value = `get${upercaseKey}`;
                 console.log(value);
 
-                atributes[key] = this[value]();
+                attributes[key] = this[value]();
             }
 
-            return atributes;
+            return attributes;
         }
     }
 })

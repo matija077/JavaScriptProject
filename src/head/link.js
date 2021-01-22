@@ -26,14 +26,11 @@ function getElementTypeImp() {
 Object.defineProperties(Link.prototype, {
     getAttributesForDOM: {
         value: function getAttributesForDOM() {
-            var atributes = ["rel", "href"];
-
-            /*attributes.rel = this.getRel();
-            attributes.href = this.getHref();*/
+            var attributes = ["rel", "href"];
 
             const superEmulated = Object.getPrototypeOf(this.constructor).prototype;
-            console.log(superEmulated);
-            return superEmulated.getAttributesForDOM.call(this, atributes);
+
+            return superEmulated.getAttributesForDOM.call(this, attributes);
         }
     }
 })

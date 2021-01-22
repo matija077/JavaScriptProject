@@ -21,34 +21,27 @@ function loadHead() {
         href: "../gallery/gallery.css"
     });
 
-    console.log(stylesheet2.getAttributesForDOM());
-    //console.log(stylesheet2.getElementType());
+    const elements = [fontsLink, fontsLink2, stylesheet1, stylesheet2];
 
-    let elements = [fontsLink, fontsLink2, stylesheet1, stylesheet2];
+    const domElements = createDomElements(elements);
 
-    createDomElements(elements);
-
-    addToHead(elements);
+    addToHead(domElements);
 }
 
 function createDomElements(elements) {
+    var domElements = [];
     for (let element of elements) {
-        console.log(element.getType());
-        console.log(element.getAttributesForDOM());
+        let domElement = document.createElement(element.getType());
+
+        const attributes = element.getAttributesForDOM();
+        for (let attribute in attributes) {
+            domElement.setAttribute(attribute, attributes[attribute]);
+        }
+
+        domElements.push(domElement);
     }
 
-    //var element = document.createElement('link');
-
-    
-    
-
-    /*for (let atribute in params) {
-        link.setAttribute(atribute, params[atribute]);
-    }*/
-
-    //return link;
-
-    //return element;
+    return domElements;
 }
 
 function addToHead(elements) {
