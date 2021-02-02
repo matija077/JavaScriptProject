@@ -15,24 +15,24 @@ function Link({
     }
 }
 
-Link.prototype = Object.create(Element.prototype);
+const prototype = {
+    getAttributesForDOM() {
+        var attributes = ["rel", "href"];
+        //const superEmulated = Object.getPrototypeOf(this.constructor).prototype;
+        console.log(super.getAttributesForDOM);
+
+        return super.getAttributesForDOM(attributes)
+        //return superEmulated.getAttributesForDOM.call(this, attributes);
+    }
+}
+
+Object.setPrototypeOf(prototype, Element.prototype)
+Link.prototype = prototype;
 Link.prototype.constructor = Link;
 Object.setPrototypeOf(Link, Element);
 
-function getElementTypeImp() {
-    console.log("working");
-}
-
 Object.defineProperties(Link.prototype, {
-    getAttributesForDOM: {
-        value: function getAttributesForDOM() {
-            var attributes = ["rel", "href"];
-
-            const superEmulated = Object.getPrototypeOf(this.constructor).prototype;
-
-            return superEmulated.getAttributesForDOM.call(this, attributes);
-        }
-    }
+    getAttributesForDOM: {}
 })
 
 export default Link;

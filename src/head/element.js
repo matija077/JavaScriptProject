@@ -1,5 +1,5 @@
 function Element({
-    id = undefined, 
+    id = undefined,
     className = undefined,
     type = "Element"
 }) {
