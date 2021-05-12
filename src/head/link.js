@@ -5,6 +5,8 @@ function Link({
     href
 }){
     Element.call(this, {type: "Link"});
+    const t = 2;
+    this.getT = () => t;
 
     this.getRel = function() {
         return rel;
@@ -32,7 +34,9 @@ Link.prototype.constructor = Link;
 Object.setPrototypeOf(Link, Element);
 
 Object.defineProperties(Link.prototype, {
-    getAttributesForDOM: {}
+    getAttributesForDOM: {
+       enumerable: false
+    }
 })
 
 export default Link;
